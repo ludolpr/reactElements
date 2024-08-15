@@ -24,10 +24,40 @@ const Sidebar = () => {
     const [selected, setSelected] = useState("Dashboard")
     return (
         <Box sx={{ 
-            "& pro-sidebar-inner": {
-                background: `${colors.primary[400]}`
-            } 
-        }}></Box>
+            "& .pro-sidebar-inner": {
+                background: `${colors.primary[400]} !important`
+            },
+            "& .pro-icon-wrapper" : {
+                backgroundColor: "transparent !important"
+            },
+            "& .pro-inner-item": {
+                padding: "5px 35px 5px 20px !important"
+            },
+            "& .pro-inner-item:hover": {
+                color: "#868dfp !important"
+            },
+            "& .pro-menu-item.active": {
+                color: "#6870fa !important"
+            }
+        }}>
+
+            {/* USER */}
+            {!isCollapsed && (
+                <Box mb="25px">
+                    <Box display="flex" justifyContent="center" alignItems="center">
+                        <img alt="profile-user" width="100px" height="100px" src={`../../assets/user.png`} style={{cursor: "pointer", borderRadius="50% "}} />
+                    </Box>
+                    <Box>
+                        <Typography>
+                            Ludolpr
+                        </Typography>
+                        <Typography>
+                            VP FANCY ADMIN
+                        </Typography>
+                    </Box>
+                </Box>
+            )}
+        </Box>
     );
 }
 export default Sidebar;

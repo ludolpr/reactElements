@@ -4,3 +4,7 @@ commande installation
 
 
 tailwind color commande ctrl + k et ctrl + g
+
+
+style note : 
+padding : top , right, bottum, left 
